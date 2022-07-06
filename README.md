@@ -1,1 +1,7 @@
-# cosmos_2022
+# TA Github Repository for COSMOS Cluster 6, 2022
+Contains R, Python, and Snakemake directories with Jupyter notebooks to walk you through various bioinformatics exercises.
+1. Log on to HPC and go to your directory: `cd /data/class/cosmos-2022/$USER`
+2. `git clone https://github.com/erebboah/cosmos_2022.git`
+3. `ls -l`
+
+You should see a new directory called “ta-github”
