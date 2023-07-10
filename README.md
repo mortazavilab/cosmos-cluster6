@@ -15,7 +15,7 @@ Copy this code into a cell and try running it:
 
 
 # Cloning this Github repository
-1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://docs.google.com/presentation/d/1XkhM_1Z9dsAPPeg31nrXUsKbAKWJ-iHeLLOzTKuuAdw/edit#slide=id.g257914d541e_0_174) for help!
+1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://docs.google.com/presentation/d/1XkhM_1Z9dsAPPeg31nrXUsKbAKWJ-iHeLLOzTKuuAdw/edit#slide=id.g257914d541e_0_174) for a walkthrough, and message us on the [help channel](https://cosmoscluster62023.slack.com/archives/C05FS0M03PH) on Slack for help!
 2. Run the following line: `git clone https://github.com/erebboah/ta-github.git`
 3. Type `ls` to list the contents of your home directory on HPC. You should see a new directory called “ta-github”
 4. Refresh your jupyter file browser to also see "ta-github". You can navigate into the directory and explore the other notebooks and data using HPC's jupyter environment.
