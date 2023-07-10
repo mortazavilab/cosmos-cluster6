@@ -352,7 +352,7 @@ print(df.head())
 print()
 
 temp = df.groupby('kind').sum().reset_index() 
-print(temp.head()
+print(temp.head())
 ```
 
 ```python
