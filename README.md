@@ -471,18 +471,18 @@ print(df)
 ```
 
 ```python
-# what if we want to determine what percent of nam's total collection
+# what if we want to determine what percent of ali's total collection
 # of animals that each individual animal comprises?
 
 # use the sum function to compute the total number of
-# animals that nam has
-nam_total = df['nam'].sum()
-print(nam_total)
+# animals that ali has
+ali_total = df['ali'].sum()
+print(ali_total)
 print()
 
 # create a new column that computes percent of 
-# total animals that each animal nam has comprises
-df['nam_percent'] = (df['nam']/nam_total)*100
+# total animals that each animal ali has comprises
+df['ali_percent'] = (df['ali']/ali_total)*100
 print(df)
 ```
 
