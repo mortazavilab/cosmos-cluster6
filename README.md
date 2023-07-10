@@ -13,9 +13,27 @@ Each unit in a jupyter notebook is called a cell. Typically when I use ipynbs, I
 
 Copy this code into a cell and try running it:
 ```python
-def hello_world():
-print("Hello, world!")
+print('hello world')
 ```
+
+Another really nice feature of ipynbs that particularly well-suited for data science is the persistence of variables after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then to continue using your variables.
+
+Take the following example, say we have a list and we want to swap out all instances of 'dog' for 'cat'
+
+```python
+pet_list = ['dog', 'cat', 'guinea_pig', 'lizard', 'cat', 'dog', 'mouse']
+```
+
+First, we can see if we can identify which parts of the list contain 'dog' instances.
+
+```python
+# loop through the list and find the indices of the list where the element is 'dog'
+dog_indices = []
+for i, element in enumerate(pet_list):
+    if element == 'dog':
+        dog_indices.append(i)
+```
+
 
 # Cloning this Github repository
 1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://docs.google.com/presentation/d/1XkhM_1Z9dsAPPeg31nrXUsKbAKWJ-iHeLLOzTKuuAdw/edit#slide=id.g257914d541e_0_174) for a walkthrough, and message us on the Slack [help channel](https://cosmoscluster62023.slack.com/archives/C05FS0M03PH) for help!
