@@ -34,6 +34,26 @@ for i, element in enumerate(pet_list):
         dog_indices.append(i)
 ```
 
+```python
+# make sure that each of the indices we found are 'dog'
+for i in dog_indices:
+    print()
+    print(pet_list[i])
+    print(pet_list[i] == 'dog')
+```
+
+```python
+# now that we can be confident that we've identified all the elements of the list that are 'dog', we can replace them
+for i in dog_indices:
+    pet_list[i] = 'cat'
+```
+
+```python
+# and finally, verify that all of the elements of the list have been replaced
+print(pet_list)
+print('dog' in pet_list)
+```
+
 
 # Cloning this Github repository
 1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://docs.google.com/presentation/d/1XkhM_1Z9dsAPPeg31nrXUsKbAKWJ-iHeLLOzTKuuAdw/edit#slide=id.g257914d541e_0_174) for a walkthrough, and message us on the Slack [help channel](https://cosmoscluster62023.slack.com/archives/C05FS0M03PH) for help!
