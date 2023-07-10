@@ -436,7 +436,7 @@ print(temp)
 print(df)
 print()
 
-temp = df.melt(id_vars=['animal', 'kind'], value_vars=['fairlie', 'liz', 'jaz', 'nam'], 
+temp = df.melt(id_vars=['animal', 'kind'], value_vars=['fairlie', 'liz', 'jaz', 'ali'], 
                var_name='person', value_name='counts')
 print(temp)
 ```
