@@ -16,7 +16,7 @@ Copy this code into a cell and try running it:
 print('hello world')
 ```
 
-Another really nice feature of ipynbs that particularly well-suited for data science is the persistence of variables after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then to continue using your variables.
+Another really nice feature of ipynbs that is particularly well-suited for data science is the persistence of variables after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then to continue using your variables.
 
 Take the following example, say we have a list and we want to swap out all instances of 'dog' for 'cat'
 
