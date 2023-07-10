@@ -12,7 +12,10 @@ For those who have programmed and run their own programs before, perhaps you're 
 Each unit in a jupyter notebook is called a cell. Typically when I use ipynbs, I run one cell at a time. You can run a cell by clicking on it and pressing shift+enter.
 
 Copy this code into a cell and try running it:
-
+```python
+def hello_world():
+print("Hello, world!")
+```
 
 # Cloning this Github repository
 1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://docs.google.com/presentation/d/1XkhM_1Z9dsAPPeg31nrXUsKbAKWJ-iHeLLOzTKuuAdw/edit#slide=id.g257914d541e_0_174) for a walkthrough, and message us on the Slack [help channel](https://cosmoscluster62023.slack.com/archives/C05FS0M03PH) for help!
