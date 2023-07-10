@@ -85,7 +85,7 @@ print()
 my_string = 'hello world' # text enclosed in either '' or "" are 'strings'
 print(my_string)
 print(type(my_string))
-print(
+print()
 ```
 
 
