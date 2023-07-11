@@ -3,10 +3,10 @@
 #SBATCH -A cosmos2023_lab            ## account to charge 
 #SBATCH -p standard               ## partition/queue name
 #SBATCH --nodes=1                 ## (-N) number of nodes to use
-#SBATCH --cpus-per-task=8         ## number of cores the job needs
+#SBATCH --cpus-per-task=2         ## number of cores the job needs
 #SBATCH --output=align-%J.out ## output log file
 #SBATCH --error=align-%J.err ## error log file
-#SBATCH --mem=64G
+#SBATCH --mem=16G
 
 # Load kallisto program
 module load kallisto
