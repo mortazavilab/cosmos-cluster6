@@ -1,0 +1,13 @@
+{
+	"n_targets": 188753,
+	"n_bootstraps": 0,
+	"n_processed": 17443611,
+	"n_pseudoaligned": 15704429,
+	"n_unique": 2892594,
+	"p_pseudoaligned": 90.0,
+	"p_unique": 16.6,
+	"kallisto_version": "0.48.0",
+	"index_version": 10,
+	"start_time": "Mon Jul 10 23:07:11 2023",
+	"call": "kallisto quant -i /data/class/cosmos2023/PUBLIC/ref/homo_sapiens/transcriptome.idx -o ../kallisto_output/SRR10870730 /data/class/cosmos2023/PUBLIC/fastq/SRR10870730_1.fastq.gz /data/class/cosmos2023/PUBLIC/fastq/SRR10870730_2.fastq.gz"
+}
