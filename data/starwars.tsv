@@ -1,4 +1,4 @@
-name	height	mass	hair_color	skin_color	eye_color	birth_year	sex	gender	homeworld	species
+name	height	mass	hair_color	skin_color	eye_color	age	sex	gender	homeworld	species
 Luke Skywalker	172	77	blond	fair	blue	19	male	masculine	Tatooine	Human
 C-3PO	167	75	NA	gold	yellow	112	none	masculine	Tatooine	Droid
 R2-D2	96	32	NA	white, blue	red	33	none	masculine	Naboo	Droid
