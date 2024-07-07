@@ -16,22 +16,46 @@ Copy this code into a cell and try running it:
 print('hello world')
 ```
 
-Another really nice feature of ipynbs that is particularly well-suited for data science is the persistence of variables after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then to continue using your variables.
+Another feature of ipynbs that is particularly well-suited for data science is the **persistence of variables** after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then continue using your variables.
 
-Take the following example, say we have a list and we want to swap out all instances of 'dog' for 'cat'
+Take the following example, say we have variables a and b and want to perform some basic arithmetic operations:
 
 ```python
-pet_list = ['dog', 'cat', 'guinea_pig', 'lizard', 'cat', 'dog', 'mouse']
+a = 10
+b = 5
+sum_ab = a + b
+diff_ab = a - b
+product_ab = a * b
+div_ab = a / b
+
+print(sum_ab)
+print(diff_ab)
+print(product_ab)
+print(div_ab)
 ```
+
+The assignments of a and b persist across the operations. If we change `a = 5`, can you predict the following outputs?
+
+```python
+a = 5
+sum_ab = a + b
+diff_ab = a - b
+product_ab = a * b
+div_ab = a / b
+
+print(sum_ab)
+print(diff_ab)
+print(product_ab)
+print(div_ab)
+```
+
+Notice that the variables `sum_ab`, `diff_ab`, `product_ab`, and `div_ab` have all been updated to reflect the new `a`. It's important to be mindful of the variables you use within a single session! When in doubt, make a new variable to store results.
+
 
 First, we can see if we can identify which parts of the list contain 'dog' instances.
 
 ```python
-# loop through the list and find the indices of the list where the element is 'dog'
-dog_indices = []
-for i, element in enumerate(pet_list):
-    if element == 'dog':
-        dog_indices.append(i)
+pet_list == 'dog'
 ```
 
 ```python
