@@ -180,22 +180,18 @@ df.head() # use df.head() to look at what's in the beginning of the dataframe
 
 ```python
 # use value_counts to count the number occurrences of the different kinds 
-temp = df.groupby('kind').count().reset_index()
-temp.rename({'animal': 'counts'}, axis=1, inplace=True)
+temp = df['kind'].value_counts().reset_index()
 temp
 ```
 
 ```python
 # you can use pandas to perform different groupby operations as well 
-# for instance, say we have a column to represent how many animals 
-# a person has
+# for instance, say we have a column to represent how many animals a person has
 df['elnaz'] = [0,4,0]
 df['jaz'] = [10,2,3]
 df['liz'] = [3,0,70]
 df['ali'] = [25,6,2]
 print(df.head())
-
-print()
 
 temp = df.groupby('kind').sum().reset_index() 
 print(temp.head())
@@ -224,8 +220,6 @@ print(df.head())
 
 temp = df.transpose()
 
-print()
-
 print(temp.head())
 ```
 
@@ -238,7 +232,7 @@ print(temp.head())
 ```python
 # access elements in the df using more than one condition (using and logic)
 
-# only amphibians that are also frogs (this is a bad example but I promise it will extend to more complex situations)
+# only amphibians that are also frogs
 temp = df[(df.kind == 'amphibian')&(df.animal == 'frog')]
 print(temp.head())
 ```
@@ -268,16 +262,11 @@ temp.fillna(0, inplace=True)
 print(temp)
 ```
 
+Sometimes you need to convert the format from wide format, where each row has multiple data entries. (in this case, each entry corresponds to the number of animals each person has), into long format, where each row represents one entry. We commonly use melt to coerce the data into a format that is compatible with plotting tools we want to use. The options are a little confusing but just play with it until it does what you want. Refer to the documentation: https://pandas.pydata.org/docs/reference/api/pandas.melt.html
+
+
 ```python
 # melt
-# sometimes you need to convert the format from wide format, where each row has multiple data entries.
-# (in this case, each entry corresponds to the number of animals each person has),
-# into long format, where each row represents one entry
-# i commonly use melt to coerce the data into a format that is compatible with
-# plotting tools I want to use
-# for me at least, the options are a little confusing but just play with it until 
-# it does what you want
-# https://pandas.pydata.org/docs/reference/api/pandas.melt.html
 
 print(df)
 print()
