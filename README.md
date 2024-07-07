@@ -101,10 +101,9 @@ print(my_dict['frog'])
 print(type(my_dict))
 ```
 
-
+The concept of a function vs. a method is difficult for Python beginners. A function is a block of reusable code that performs a specific task when called. Functions are defined using the def keyword followed by a function name, parentheses (), and a colon : to start the function body. Python is an object-oriented language, meaning specific functions can "belong" to an object. These functions are called methods, defined within a class definition and are accessed via instances of the class (objects) or directly through the class itself. 
 
 ```python
-# The concept of a function vs. a method is difficult for Python beginners
 print() # is an example of a built-in function. 
 
 # we can also define our own function with this basic syntax:
@@ -116,7 +115,6 @@ def sum(num1, num2):
    return (num1 + num2)
 sum(5,6) # now sum() is an example of a user-defined function
 
-# In contrast, a method is associated with an object. 
 # EVERYthing in python is an "object", including libraries like pandas
 # syntax:
 # class ClassName:
@@ -145,6 +143,13 @@ print(a)
 print(a.capitalize())
 print(a.upper())
 ```
+
+
+
+
+
+STILL EDIITNG BELOW
+
 
 
 ```python
