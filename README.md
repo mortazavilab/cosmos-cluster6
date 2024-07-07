@@ -155,6 +155,10 @@ print(a.upper())
 Pandas is a really powerful library for data matrix manipulation. We'll go over some common uses of it here.
 
 ```python
+import pandas as pd # load the pandas library
+```
+
+```python
 # create a dataframe
 data = ['amphibian', 'mammal', 'amphibian']
 ind = ['axlotl', 'bat', 'frog']
