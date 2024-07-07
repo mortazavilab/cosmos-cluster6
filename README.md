@@ -219,8 +219,6 @@ print(df.head())
 
 temp = df.transpose()
 
-print()
-
 print(temp.head())
 ```
 
