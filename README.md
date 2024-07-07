@@ -5,11 +5,11 @@ Contains R and Python Jupyter notebooks to walk you through various bioinformati
 ## iPython notebooks
 Welcome to Jupyter notebook on HPC (high-performance compute cluster). iPython notebooks / Jupyter notebooks are interactive multimedia environments to write and run code.
 
-Here is the link: [https://hpc3.rcic.uci.edu/biojhub3/](https://hpc3.rcic.uci.edu/biojhub3/). Please choose the "containerized notebook image" named "Centos7 Base Jupyter w/R4.1.2 + COSMOS 2023".
+Here is the link: [https://hpc3.rcic.uci.edu/biojhub4/](https://hpc3.rcic.uci.edu/biojhub4/). Please choose the "containerized notebook image" named "[Centos7] COSMOS Cluster 6".
 
 For those who have programmed and run their own programs before, perhaps you're more familiar with running your program once from start to end. iPython notebooks provide a way to run code more interactively.
 
-Each unit in a Jupyter notebook is called a cell. Typically when I use ipynbs, I run one cell at a time. You can run a cell by clicking on it and pressing shift+enter.
+Each unit in a Jupyter notebook is called a cell. Typically when we use ipynbs, we run one cell at a time. You can run a cell by clicking on it and pressing shift+enter.
 
 Copy this code into a cell and try running it:
 ```python
