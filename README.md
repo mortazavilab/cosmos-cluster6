@@ -38,10 +38,6 @@ The assignments of a and b persist across the operations. If we change `a = 5`, 
 
 ```python
 a = 5
-sum_ab = a + b
-diff_ab = a - b
-product_ab = a * b
-div_ab = a / b
 
 print(sum_ab)
 print(diff_ab)
