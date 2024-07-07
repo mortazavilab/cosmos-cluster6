@@ -190,7 +190,7 @@ df.to_csv('animals.csv')
 
 ```python
 # read in a dataframe from a csv file
-df = pd.read_csv('animals.tsv') # https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+df = pd.read_csv('animals.csv') # https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
 df.head() # use df.head() to look at what's in the beginning of the dataframe
 ```
 
