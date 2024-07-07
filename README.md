@@ -31,6 +31,8 @@ import seaborn as sns # library for plotting pandas-formatted data
 # add them to your code to remember what you were doing
 ```
 
+### Persistence of variables
+
 Another feature of ipynbs that is particularly well-suited for data science is the **persistence of variables** after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then continue using your variables.
 
 Take the following example, say we have variables a and b and want to perform some basic arithmetic operations:
@@ -61,6 +63,8 @@ print(div_ab)
 ```
 
 Notice that the variables `sum_ab`, `diff_ab`, `product_ab`, and `div_ab` have all been updated to reflect the new `a`. It's important to be mindful of the variables you use within a single session! When in doubt, make a new variable to store results.
+
+### Types of variables
 
 In Python, variables can be described by their **type**. For example, our variable `a` from the above example is an **integer**. 
 
@@ -100,6 +104,8 @@ print(my_dict['bat'])
 print(my_dict['frog'])
 print(type(my_dict))
 ```
+
+### Python functions vs. methods
 
 The concept of a function vs. a method is difficult for Python beginners. A function is a block of reusable code that performs a specific task when called. Functions are defined using the def keyword followed by a function name, parentheses (), and a colon : to start the function body. Python is an object-oriented language, meaning specific functions can "belong" to an object. These functions are called methods, defined within a class definition and are accessed via instances of the class (objects) or directly through the class itself. 
 
@@ -144,162 +150,8 @@ print(a.capitalize())
 print(a.upper())
 ```
 
+### Pandas dataframes and operations
 
-
-
-
-STILL EDIITNG BELOW
-
-
-
-```python
-# for loops
-
-# iterate until a certain number
-for i in range(10):
-    print(i)
-    
-print() # space
-
-# iterate through a list
-my_list = ['frog', 'bat', 'axlotl'] # list
-for animal in my_list:
-    print(animal)
-    
-print()
-    
-# iterate through a list while getting the number of each iteration using enumerate()
-for i, animal in enumerate(my_list):
-    print('Animal at {}: {}'.format(i, animal)) # string formatting - this is also useful
-```
-
-
-```python
-# if / else blocks - execute code based on whether or not a condition is met
-for animal in my_list:
-    if animal == 'frog' or animal == 'axlotl': # or logic - one or the other condition is met
-        print('Animal {} is an amphibian'.format(animal))
-    else:
-        print('Animal {} is not an amphibian'.format(animal))
-        
-print()
-
-first_element = True # boolean variable, can be True or False
-for animal in my_list:
-    if first_element and animal == 'frog': # and logic - both conditions must be true
-        print('First animal is frog')
-    elif first_element and animal == 'bat': # elif: the following will execute only if the first part does not. in this case, it will never run.
-        print('First animal is bat')
-    else:
-        # you can index strings the same way you can index lists. here we're just trying to see if the word
-        # starts with a vowel
-        if animal[0] == 'a' or animal[0] == 'e' or animal[0] == 'i' or animal[0] == 'o' or animal[0] == 'u': 
-            print('Found an {}'.format(animal))
-        else:
-            print('Fount a {}'.format(animal))
-    
-    first_element = False
-```
-
-
-```python
-# while loops - execute code until a condition is met
-# useful when you're not sure when something's going to be done ie you don't know the exact index
-my_list = ['cat', 'bat', 'planarian', 'frog', 'axlotl']
-i = 0
-while my_list[i] != 'frog' and my_list[i] != 'axlotl': # inequality, check if something is not equal to something else
-    i += 1 # += operator, increment by 1
-print('First amphibian ({}) occurs at index {}'.format(my_list[i], i))
-```
-
-
-```python
-# list indexing / slicing
-
-# access individual elements using individual numbers 
-# 0 is first element, -1 is last element, -2 is second from last element
-print(my_list[0])
-print(my_list[-1])
-print(my_list[-2])
-
-print()
-
-# slice list using the : operator
-print(my_list[:-1]) # all elements of the list but the last one
-print(my_list[1:]) # all elements of the list by the first one
-print(my_list[2:4]) # some middle elements of the list
-```
-
-
-```python
-# list comprehension - python provides a compact way to iterate through lists
-# this is a little tricky so I don't entirely recommend if if you aren't solid
-# on other programming concepts
-
-# say we want to make a list from this dictionary that includes both 
-# the animal and the type of animal it is in the format "axlotl_amphibian"
-my_dict = {'axlotl': 'amphibian', 'bat': 'mammal', 'frog': 'amphibian'} 
-
-# original for loop 
-new_list = []
-for key, item in my_dict.items(): # this is how you iterate through key:item pairs in a dictionary btw
-    new_list.append(key+'_'+item) # this is how you add an element to a list and how you concatenate strings together
-print(new_list)
-
-print()
-
-# list comprehension
-new_list = [key+'_'+item for key, item in my_dict.items()]
-print(new_list)
-```
-
-
-```python
-# list comprehension with if / else
-# you can use if / else logic in list comprehension as well 
-
-# say we want to make a list of True and False values to say
-# whether or not each animal in a list is an amphibian
-my_list = ['frog', 'bat', 'axlotl']
-
-# original for loop
-new_list = []
-for animal in my_list:
-    if animal == 'frog' or animal == 'axlotl':
-        new_list.append(True)
-    else:
-        new_list.append(False)
-print(new_list)
-
-print()
-
-# list comprehension
-new_list = [True if animal == 'frog' or animal == 'axlotl' else False for animal in my_list]
-print(new_list)
-```
-
-```python
-# list comprehension with if 
-# this is a little different for whatever reason
-
-# say we want to get a list of animals that are amphibians from our list
-my_list = ['frog', 'bat', 'axlotl']
-
-# original for loop
-new_list = []
-for animal in my_list:
-    if animal == 'frog' or animal == 'axlotl':
-        new_list.append(animal)
-print(new_list)
-
-print()
-
-# list comprehension
-new_list = [animal for animal in my_list if animal == 'frog' or animal == 'axlotl']
-print(new_list)
-```
-
-## Pandas
 Pandas is a really powerful library for data matrix manipulation. I'll go over some common uses of it here.
 
 Big data manipulation is pretty tricky and the language that is used in the field is specific and difficult to master for Googling. If you feel like you're trying to do something with a matrix that feels like there's got to be a better way to do it, you're probably right and we can help you investigate.
@@ -484,6 +336,159 @@ print(df)
 print(df['kind'].tolist())
 
 print(df['kind'].unique().tolist())
+```
+
+### For loops
+
+
+```python
+# for loops
+
+# iterate until a certain number
+for i in range(10):
+    print(i)
+    
+print() # space
+
+# iterate through a list
+my_list = ['frog', 'bat', 'axlotl'] # list
+for animal in my_list:
+    print(animal)
+    
+print()
+    
+# iterate through a list while getting the number of each iteration using enumerate()
+for i, animal in enumerate(my_list):
+    print('Animal at {}: {}'.format(i, animal)) # string formatting - this is also useful
+```
+
+
+```python
+# if / else blocks - execute code based on whether or not a condition is met
+for animal in my_list:
+    if animal == 'frog' or animal == 'axlotl': # or logic - one or the other condition is met
+        print('Animal {} is an amphibian'.format(animal))
+    else:
+        print('Animal {} is not an amphibian'.format(animal))
+        
+print()
+
+first_element = True # boolean variable, can be True or False
+for animal in my_list:
+    if first_element and animal == 'frog': # and logic - both conditions must be true
+        print('First animal is frog')
+    elif first_element and animal == 'bat': # elif: the following will execute only if the first part does not. in this case, it will never run.
+        print('First animal is bat')
+    else:
+        # you can index strings the same way you can index lists. here we're just trying to see if the word
+        # starts with a vowel
+        if animal[0] == 'a' or animal[0] == 'e' or animal[0] == 'i' or animal[0] == 'o' or animal[0] == 'u': 
+            print('Found an {}'.format(animal))
+        else:
+            print('Fount a {}'.format(animal))
+    
+    first_element = False
+```
+
+
+```python
+# while loops - execute code until a condition is met
+# useful when you're not sure when something's going to be done ie you don't know the exact index
+my_list = ['cat', 'bat', 'planarian', 'frog', 'axlotl']
+i = 0
+while my_list[i] != 'frog' and my_list[i] != 'axlotl': # inequality, check if something is not equal to something else
+    i += 1 # += operator, increment by 1
+print('First amphibian ({}) occurs at index {}'.format(my_list[i], i))
+```
+
+
+```python
+# list indexing / slicing
+
+# access individual elements using individual numbers 
+# 0 is first element, -1 is last element, -2 is second from last element
+print(my_list[0])
+print(my_list[-1])
+print(my_list[-2])
+
+print()
+
+# slice list using the : operator
+print(my_list[:-1]) # all elements of the list but the last one
+print(my_list[1:]) # all elements of the list by the first one
+print(my_list[2:4]) # some middle elements of the list
+```
+
+
+### List comprehension
+
+
+```python
+# list comprehension - python provides a compact way to iterate through lists
+# this is a little tricky so I don't entirely recommend if if you aren't solid
+# on other programming concepts
+
+# say we want to make a list from this dictionary that includes both 
+# the animal and the type of animal it is in the format "axlotl_amphibian"
+my_dict = {'axlotl': 'amphibian', 'bat': 'mammal', 'frog': 'amphibian'} 
+
+# original for loop 
+new_list = []
+for key, item in my_dict.items(): # this is how you iterate through key:item pairs in a dictionary btw
+    new_list.append(key+'_'+item) # this is how you add an element to a list and how you concatenate strings together
+print(new_list)
+
+print()
+
+# list comprehension
+new_list = [key+'_'+item for key, item in my_dict.items()]
+print(new_list)
+```
+
+
+```python
+# list comprehension with if / else
+# you can use if / else logic in list comprehension as well 
+
+# say we want to make a list of True and False values to say
+# whether or not each animal in a list is an amphibian
+my_list = ['frog', 'bat', 'axlotl']
+
+# original for loop
+new_list = []
+for animal in my_list:
+    if animal == 'frog' or animal == 'axlotl':
+        new_list.append(True)
+    else:
+        new_list.append(False)
+print(new_list)
+
+print()
+
+# list comprehension
+new_list = [True if animal == 'frog' or animal == 'axlotl' else False for animal in my_list]
+print(new_list)
+```
+
+```python
+# list comprehension with if 
+# this is a little different for whatever reason
+
+# say we want to get a list of animals that are amphibians from our list
+my_list = ['frog', 'bat', 'axlotl']
+
+# original for loop
+new_list = []
+for animal in my_list:
+    if animal == 'frog' or animal == 'axlotl':
+        new_list.append(animal)
+print(new_list)
+
+print()
+
+# list comprehension
+new_list = [animal for animal in my_list if animal == 'frog' or animal == 'axlotl']
+print(new_list)
 ```
 
 # Cloning this Github repository
