@@ -1,4 +1,4 @@
-# TA Github Repository for COSMOS Cluster 6, 2023
+# TA Github Repository for COSMOS Cluster 6
 Contains R and Python Jupyter notebooks to walk you through various bioinformatics exercises.
 
 # Intro to Python, pandas, and iPython notebooks
