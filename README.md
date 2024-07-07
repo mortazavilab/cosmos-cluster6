@@ -16,6 +16,21 @@ Copy this code into a cell and try running it:
 print('hello world')
 ```
 
+A functionality of ipynbs is their direct compatibility with Markdown, which is actually what this tutorial is written in. For each cell in a Jupyter notebook that you write, you can choose whether it should be interpreted as code, Markdown, or raw text. Markdown supports text *formatting* such as **this**. You can also make headings in Markdown for different sections of your Jupyter notebook, which you can see in the other parts of this tutorial.
+
+## Python
+
+When you created your Jupyter Notebook, you choose a specific kernel that corresponds to the programming language you want to use. The kernel acts as an intermediary between the user interface (Jupyter) and the programming language used in the notebook (e.g., Python, R, etc.) Python is a programming language that is commonly used in bioinformatics. It is easy to understand and write, and has powerful libraries that you can load for data science and visualization.
+
+```python
+# import is like library() in R. by using the "as" keyword you can give imports different variable names
+
+import pandas as pd # library for data matrix manipulation
+import seaborn as sns # library for plotting pandas-formatted data
+# by the way, lines that start with '#' are called comments
+# add them to your code to remember what you were doing
+```
+
 Another feature of ipynbs that is particularly well-suited for data science is the **persistence of variables** after running a cell of code. That is to say, if you run some code in one cell, you can then access it in another cell and investigate what it is. This allows you to run small chunks of code at a time, make sure that they're doing what you want them to, and then continue using your variables.
 
 Take the following example, say we have variables a and b and want to perform some basic arithmetic operations:
@@ -47,54 +62,12 @@ print(div_ab)
 
 Notice that the variables `sum_ab`, `diff_ab`, `product_ab`, and `div_ab` have all been updated to reflect the new `a`. It's important to be mindful of the variables you use within a single session! When in doubt, make a new variable to store results.
 
-
-First, we can see if we can identify which parts of the list contain 'dog' instances.
-
-```python
-pet_list == 'dog'
-```
-
-```python
-# make sure that each of the indices we found are 'dog'
-for i in dog_indices:
-    print(pet_list[i])
-    print(pet_list[i] == 'dog')
-```
-
-```python
-# now that we can be confident that we've identified all the elements of the list that are 'dog', we can replace them
-for i in dog_indices:
-    pet_list[i] = 'cat'
-```
-
-```python
-# and finally, verify that all of the elements of the list have been replaced
-print(pet_list)
-print('dog' in pet_list)
-```
-
-This is a pretty simple example, but hopefully it demonstrates the value of being able to stop and examine what your code is doing while you're writing it, instead of debugging it by running everything over again every single time. This convenience shines when you're dealing with big data and don't have to bother loading it / transforming it (which can be very time consuming steps) every time you want to try something new.
-
-An additional nice functionality of ipynbs is their direct compatibility with Markdown, which is actually what this tutorial is written in. For each cell in a Jupyter notebook that you write, you can choose whether it should be interpreted as code, Markdown, or raw text. Markdown supports text *formatting* such as **this**. You can also make headings in Markdown for different sections of your Jupyter notebook, which you can see in the other parts of this tutorial.
-
-## Python
-
-When you created your Jupyter Notebook, you choose a specific kernel that corresponds to the programming language you want to use. The kernel acts as an intermediary between the user interface (Jupyter) and the programming language used in the notebook (e.g., Python, R, etc.) Python is a programming language that is commonly used in bioinformatics. It is easy to understand and write, and has powerful libraries that you can load for data science and visualization.
-
-```python
-# import is like library() in R. by using the "as" keyword you can give imports different variable names
-
-import pandas as pd # library for data matrix manipulation
-import seaborn as sns # library for plotting pandas-formatted data
-# by the way, lines that start with '#' are called comments
-# add them to your code to remember what you were doing
-```
+In Python, variables can be described by their **type**. For example, our variable `a` from the above example is an **integer**. 
 
 ```python
 # types of variables (simple)
-my_int = 1 # whole numbers are 'ints' (integers)
-print(my_int)
-print(type(my_int))
+print(a)
+print(type(a))
 print()
 
 my_float = 0.003 # numbers with decimal places are 'floats' and have higher precision than ints
