@@ -168,18 +168,18 @@ df
 ```
 
 ```python
-# write a dataframe to a tsv file
-df.to_csv('animals.tsv', sep='\t')
+# write a dataframe to a csv file
+df.to_csv('animals.csv')
 ```
 
 ```python
-# read in a dataframe from a tsv file
-df = pd.read_csv('animals.tsv', sep='\t') # https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+# read in a dataframe from a csv file
+df = pd.read_csv('animals.tsv') # https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
 df.head() # use df.head() to look at what's in the beginning of the dataframe
 ```
 
 ```python
-# use groupby to count the number occurrences of the different kinds 
+# use value_counts to count the number occurrences of the different kinds 
 temp = df.groupby('kind').count().reset_index()
 temp.rename({'animal': 'counts'}, axis=1, inplace=True)
 temp
@@ -189,9 +189,9 @@ temp
 # you can use pandas to perform different groupby operations as well 
 # for instance, say we have a column to represent how many animals 
 # a person has
-df['fairlie'] = [3,0,70]
-df['liz'] = [0,4,0]
+df['elnaz'] = [0,4,0]
 df['jaz'] = [10,2,3]
+df['liz'] = [3,0,70]
 df['ali'] = [25,6,2]
 print(df.head())
 
@@ -214,7 +214,7 @@ print(temp.head())
 
 ```python
 # access elements in the df using conditions
-temp = df.loc[df.kind == 'amphibian'] # only amphibians
+temp = df[df.kind == 'amphibian'] # only amphibians
 print(temp.head())
 ```
 
@@ -231,7 +231,7 @@ print(temp.head())
 
 ```python
 # access elements in the df using conditions
-temp = df.loc[df.kind == 'amphibian'] # only amphibians
+temp = df[df.kind == 'amphibian'] # only amphibians
 print(temp.head())
 ```
 
@@ -239,7 +239,7 @@ print(temp.head())
 # access elements in the df using more than one condition (using and logic)
 
 # only amphibians that are also frogs (this is a bad example but I promise it will extend to more complex situations)
-temp = df.loc[(df.kind == 'amphibian')&(df.animal == 'frog')]
+temp = df[(df.kind == 'amphibian')&(df.animal == 'frog')]
 print(temp.head())
 ```
 
