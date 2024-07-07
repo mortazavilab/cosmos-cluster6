@@ -51,10 +51,26 @@ print(product_ab)
 print(div_ab)
 ```
 
-The assignments of a and b persist across the operations, as well as the formulas stored in `sum_ab`, `diff_ab`, `product_ab`, and `div_ab`. If we change `a = 5`, can you predict the following outputs?
+The assignments of a and b persist across the operations, as well as the values stored in `sum_ab`, `diff_ab`, `product_ab`, and `div_ab`. If we change `a = 5`, can you predict the following outputs?
 
 ```python
 a = 5
+
+print(sum_ab)
+print(diff_ab)
+print(product_ab)
+print(div_ab)
+```
+
+How about now, when we re-define `sum_ab`, `diff_ab`, `product_ab`, and `div_ab`?
+
+```python
+a = 5
+
+sum_ab = a + b
+diff_ab = a - b
+product_ab = a * b
+div_ab = a / b
 
 print(sum_ab)
 print(diff_ab)
