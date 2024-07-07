@@ -152,9 +152,7 @@ print(a.upper())
 
 ### Pandas dataframes and operations
 
-Pandas is a really powerful library for data matrix manipulation. I'll go over some common uses of it here.
-
-Big data manipulation is pretty tricky and the language that is used in the field is specific and difficult to master for Googling. If you feel like you're trying to do something with a matrix that feels like there's got to be a better way to do it, you're probably right and we can help you investigate.
+Pandas is a really powerful library for data matrix manipulation. We'll go over some common uses of it here.
 
 ```python
 # create a dataframe
