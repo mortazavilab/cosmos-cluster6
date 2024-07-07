@@ -81,6 +81,7 @@ print(type(my_string))
 print()
 ```
 
+Python also supports **lists**, items separated by commas enclosed by square brackets:
 
 ```python
 my_list = ['frog', 'bat', 'axlotl'] # list
@@ -90,6 +91,7 @@ print(my_list[2])
 print(type(my_list))
 ```
 
+As well as **dictionaries**, collections of key-value pairs where each key is unique and associated with a value. Dictionaries are defined using curly braces {} and each key-value pair is separated by a colon :.
 
 ```python
 my_dict = {'axlotl': 'amphibian', 'bat': 'mammal', 'frog': 'amphibian'} # dictionary - store key:value pairs
@@ -99,14 +101,6 @@ print(my_dict['frog'])
 print(type(my_dict))
 ```
 
-
-```python
-data = ['amphibian', 'mammal', 'amphibian']
-ind = ['axlotl', 'bat', 'frog']
-df = pd.DataFrame(data=data, index=ind, columns=['kind']) # pandas data frame - I work with these every day!
-print(df)
-print(type(df))
-```
 
 
 ```python
