@@ -288,7 +288,7 @@ print(temp)
 
 print(temp)
 
-temp = temp.pivot(['animal', 'kind'], columns='person', values='counts')
+temp = temp.pivot(index=['animal', 'kind'], columns='person', values='counts')
 print(temp)
 ```
 
