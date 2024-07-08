@@ -277,7 +277,7 @@ Sometimes you need to convert the format from wide format, where each row has mu
 
 print(df)
 
-temp = df.melt(id_vars=['animal', 'kind'], value_vars=['fairlie', 'liz', 'jaz', 'ali'], 
+temp = df.melt(id_vars=['animal', 'kind'], value_vars=['elnaz', 'liz', 'jaz', 'ali'], 
                var_name='person', value_name='counts')
 print(temp)
 ```
@@ -296,8 +296,8 @@ print(temp)
 # perform mathematical operations on your dataframe
 # pandas can perform many math operations on elements of your dataframe in parallel (so it's really efficient)
 
-# create a new column that's the sum of the animals that liz and fairlie have
-df['5th_years'] = df['fairlie']+df['liz']
+# create a new column that's the sum of the animals that liz and jaz have
+df['5th_years'] = df['jaz']+df['liz']
 print(df)
 ```
 
