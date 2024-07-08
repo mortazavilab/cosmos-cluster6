@@ -296,8 +296,8 @@ print(temp)
 # perform mathematical operations on your dataframe
 # pandas can perform many math operations on elements of your dataframe in parallel (so it's really efficient)
 
-# create a new column that's the sum of the animals that liz and jaz have
-df['5th_years'] = df['jaz']+df['liz']
+# create a new column that's the sum of the animals that jaz and elnaz have
+df['grad_students'] = df['jaz']+df['elnaz']
 print(df)
 ```
 
@@ -311,16 +311,13 @@ print(df)
 ```
 
 ```python
-# what if we want to determine what percent of ali's total collection
-# of animals that each individual animal comprises?
+# what if we want to determine what percent of ali's total collection of animals that each individual animal comprises?
 
-# use the sum function to compute the total number of
-# animals that ali has
+# use the sum function to compute the total number of animals that ali has
 ali_total = df['ali'].sum()
 print(ali_total)
 
-# create a new column that computes percent of 
-# total animals that each animal ali has comprises
+# create a new column that computes percent of total animals that each animal ali has comprises
 df['ali_percent'] = (df['ali']/ali_total)*100
 print(df)
 ```
