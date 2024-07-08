@@ -253,7 +253,6 @@ print(temp.head())
 # there are a lot of options so please look at the documentation for more info!
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html
 data = [['frog', 0, 10], ['axlotl', 0, 20]]
-# data = [['frog', 'axlotl'], [0,0], [10,20]]
 
 columns = ['animal_new', 'ali', 'kyoko']
 new_df = pd.DataFrame(data=data, columns=columns)
