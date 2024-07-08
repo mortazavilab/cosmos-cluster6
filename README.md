@@ -88,17 +88,14 @@ In Python, variables can be described by their **type**. For example, our variab
 # types of variables (simple)
 print(a)
 print(type(a))
-print()
 
 my_float = 0.003 # numbers with decimal places are 'floats' and have higher precision than ints
 print(my_float)
 print(type(my_float))
-print()
 
 my_string = 'hello world' # text enclosed in either '' or "" are 'strings'
 print(my_string)
 print(type(my_string))
-print()
 ```
 
 Python also supports **lists**, items separated by commas enclosed by square brackets:
@@ -262,13 +259,10 @@ columns = ['animal_new', 'ali', 'kyoko']
 new_df = pd.DataFrame(data=data, columns=columns)
 print(new_df)
 print(df)
-print()
 
 # merge new animal ownership info with old 
 temp = df.merge(new_df, how='outer', left_on='animal', right_on='animal_new')
 print(temp)
-
-print()
 
 # fill NaN (not a number) values with 0s and replacce the missing animal_new values
 temp['animal_new'] = temp['animal']
@@ -283,7 +277,6 @@ Sometimes you need to convert the format from wide format, where each row has mu
 # melt
 
 print(df)
-print()
 
 temp = df.melt(id_vars=['animal', 'kind'], value_vars=['fairlie', 'liz', 'jaz', 'ali'], 
                var_name='person', value_name='counts')
@@ -295,7 +288,6 @@ print(temp)
 # pivot is the opposite of melt. turn a long-form data matrix into a wide-form one
 
 print(temp)
-print()
 
 temp = temp.pivot(['animal', 'kind'], columns='person', values='counts')
 print(temp)
@@ -327,7 +319,6 @@ print(df)
 # animals that ali has
 ali_total = df['ali'].sum()
 print(ali_total)
-print()
 
 # create a new column that computes percent of 
 # total animals that each animal ali has comprises
@@ -352,15 +343,11 @@ print(df['kind'].unique().tolist())
 # iterate until a certain number
 for i in range(10):
     print(i)
-    
-print() # space
 
 # iterate through a list
 my_list = ['frog', 'bat', 'axlotl'] # list
 for animal in my_list:
     print(animal)
-    
-print()
     
 # iterate through a list while getting the number of each iteration using enumerate()
 for i, animal in enumerate(my_list):
@@ -375,8 +362,7 @@ for animal in my_list:
         print('Animal {} is an amphibian'.format(animal))
     else:
         print('Animal {} is not an amphibian'.format(animal))
-        
-print()
+
 
 first_element = True # boolean variable, can be True or False
 for animal in my_list:
@@ -416,8 +402,6 @@ print(my_list[0])
 print(my_list[-1])
 print(my_list[-2])
 
-print()
-
 # slice list using the : operator
 print(my_list[:-1]) # all elements of the list but the last one
 print(my_list[1:]) # all elements of the list by the first one
@@ -443,7 +427,6 @@ for key, item in my_dict.items(): # this is how you iterate through key:item pai
     new_list.append(key+'_'+item) # this is how you add an element to a list and how you concatenate strings together
 print(new_list)
 
-print()
 
 # list comprehension
 new_list = [key+'_'+item for key, item in my_dict.items()]
@@ -468,8 +451,6 @@ for animal in my_list:
         new_list.append(False)
 print(new_list)
 
-print()
-
 # list comprehension
 new_list = [True if animal == 'frog' or animal == 'axlotl' else False for animal in my_list]
 print(new_list)
@@ -488,8 +469,6 @@ for animal in my_list:
     if animal == 'frog' or animal == 'axlotl':
         new_list.append(animal)
 print(new_list)
-
-print()
 
 # list comprehension
 new_list = [animal for animal in my_list if animal == 'frog' or animal == 'axlotl']
