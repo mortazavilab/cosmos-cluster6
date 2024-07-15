@@ -472,7 +472,7 @@ print(new_list)
 ```
 
 # Cloning this Github repository
-1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://drive.google.com/drive/folders/1FkgLq5Qowr-aKBtwesRVfjq0DYgpOuAx) for a walkthrough, and message us on Slack for help!
+1. Log on to HPC using Terminal (Mac) or MobaXterm (Windows). See [TA slides](https://docs.google.com/presentation/d/148AokpreeAwss4Jy0OCz3lM_tyO8eUGf/edit) for a walkthrough, and message us on Slack for help!
 2. Run the following line: 
 ```bash
 git clone https://github.com/mortazavilab/cosmos-cluster6.git 
