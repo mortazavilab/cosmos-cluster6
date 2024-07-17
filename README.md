@@ -5,7 +5,7 @@ Contains Python Jupyter notebooks to walk you through various bioinformatics exe
 ## iPython notebooks
 Welcome to Jupyter notebook on HPC (high-performance compute cluster). iPython notebooks / Jupyter notebooks are interactive multimedia environments to write and run code.
 
-Here is the link: [https://hpc3.rcic.uci.edu/biojhub4/](https://hpc3.rcic.uci.edu/biojhub4/). Please choose the "containerized notebook image" named **[Centos7] COSMOS Cluster 6**.
+Here's the link: [https://hpc3.rcic.uci.edu/biojhub4/](https://hpc3.rcic.uci.edu/biojhub4/). Please choose the "containerized notebook image" named **[Centos7] COSMOS Cluster 6**.
 
 For those who have programmed and run their own programs before, perhaps you're more familiar with running your program once from start to end. iPython notebooks provide a way to run code more interactively.
 
